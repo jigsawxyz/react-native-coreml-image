@@ -1,0 +1,23 @@
+{
+  "name": "CoreMLImageExample",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.0.0",
+    "react-native": "0.51.0",
+    "react-native-core-ml-image": "0.0.2"
+  },
+  "devDependencies": {
+    "babel-jest": "22.0.1",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.0.1",
+    "react-test-renderer": "16.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
