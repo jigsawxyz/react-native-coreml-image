@@ -36,6 +36,8 @@ We're in the process of writing a tutorial on how to create your own model using
 
 Once you've downloaded, or created, a CoreML Model, rename it from .mlmodel to .mlmodelc and drop it into your XCode project (ensure that you add it to your main project target if offered the choice).
 
+Go to the Build Phases tab of your project in XCode, and check that the model file you added is listed under the Copy Bundle Resources section. If not, add it.
+
 ## Add NSCameraUsageDescription to your info.plist
 The component uses the camera to identify objects, so you need to add a description to the NSCameraUsageDescription in your info.plist file.
 

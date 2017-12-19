@@ -69,18 +69,9 @@ public class CoreMLImage: UIView, AVCaptureVideoDataOutputSampleBufferDelegate {
       let classifications = results as! [VNClassificationObservation]
       
       classifications.forEach{classification in
-        if (classification.confidence > 0.5) {
-          let conf = String(describing: classification.confidence)
-          
-          if (self.lastClassification != classification.identifier) {
-            self.lastClassification = classification.identifier
-            
-            self.onClassification!(["classification": ["identifier": classification.identifier, "confidence": classification.confidence]])
-            
-          }
-          
+        self.onClassification!(["classification": ["identifier": classification.identifier, "confidence": classification.confidence]])
+    
         }
-      }
       
     }
     
