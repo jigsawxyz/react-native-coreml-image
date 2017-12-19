@@ -21,7 +21,7 @@ react-native link
 ```
 
 ## Set your project up to use Swift
-If your project isn't yet setup to use Swift, there are a few final steps you need to do:
+If your project isn't yet setup to use Swift, there are a few final steps you need to go through:
 
 1. In XCode, right click on your project, then on New File...
 2. Choose a Swift file, click next
@@ -31,6 +31,7 @@ If your project isn't yet setup to use Swift, there are a few final steps you ne
 ## Add a CoreML Model to your project
 Next, you need to add a CoreML Model to your project.
 Apple provides a number of open source models here - https://developer.apple.com/machine-learning/
+
 We're in the process of writing a tutorial on how to create your own model using TuriCreate. Stay tuned for that.
 
 Once you've downloaded, or created, a CoreML Model, rename it from .mlmodel to .mlmodelc and drop it into your XCode project (ensure that you add it to your main project target if offered the choice).

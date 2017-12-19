@@ -40,7 +40,7 @@ export default class CoreMLImageView extends Component {
 
 	render() {
 		return (
-			<CoreMLImageNative modelFile="DogCatDolphin" onClassification={(evt) => this.onClassification(evt)} style={{width: Dimensions.get("window").width, height: Dimensions.get("window").height}}>
+			<CoreMLImageNative modelFile={this.props.modelFile} onClassification={(evt) => this.onClassification(evt)} style={{width: Dimensions.get("window").width, height: Dimensions.get("window").height}}>
 				<View style={localStyles.overlay}>
 					{this.props.children}
 				</View>

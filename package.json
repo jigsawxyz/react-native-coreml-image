@@ -1,6 +1,6 @@
 {
   "name": "react-native-core-ml-image",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ReactNative library to allow realtime image recognition through CoreML Machine Learning",
   "license": "MIT",
   "repository" : { 
