@@ -64,10 +64,14 @@ Remember - the model file must have the file ending .mlmodelc to work.
 The onClassification event allows you to receive updates when a new object has been classified/identified. The callback includes data in the following format:
 
 ```javascript
-{
+[{
     identifier: "cat",
     confidence: 0.87
-}
+},
+{
+    identifier: "dog",
+    confidence: 0.4
+}]
 ```
 
 ## Overlaying content on top of the camera view

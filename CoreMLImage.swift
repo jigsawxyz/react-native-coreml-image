@@ -60,20 +60,24 @@ public class CoreMLImage: UIView, AVCaptureVideoDataOutputSampleBufferDelegate {
   
   func processClassifications(for request: VNRequest, error: Error?) {
     DispatchQueue.main.async {
-      guard let results = request.results else {
-        print("Unable to classify image")
-        print(error!.localizedDescription)
-        return
-      }
-      
-      let classifications = results as! [VNClassificationObservation]
-      
-      classifications.forEach{classification in
-        self.onClassification!(["classification": ["identifier": classification.identifier, "confidence": classification.confidence]])
-    
+        guard let results = request.results else {
+          print("Unable to classify image")
+          print(error!.localizedDescription)
+          return
         }
       
-    }
+        let classifications = results as! [VNClassificationObservation]
+      
+        var classificationArray = [Dictionary<String, Any>]()
+      
+        classifications.forEach{classification in
+          classificationArray.append(["identifier": classification.identifier, "confidence": classification.confidence])
+        
+        }
+      
+        self.onClassification!(["classifications": classificationArray])
+      
+      }
     
   }
   

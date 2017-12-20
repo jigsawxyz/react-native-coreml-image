@@ -34,7 +34,7 @@ export default class CoreMLImageView extends Component {
 
 	onClassification(evt) {
 		if (this.props.onClassification) {
-			this.props.onClassification(evt.nativeEvent.classification);
+			this.props.onClassification(evt.nativeEvent.classifications);
 		}
 	}
 
