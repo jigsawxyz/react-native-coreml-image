@@ -1,6 +1,6 @@
 # Live Image Recognition through CoreML and ReactNative
 
-![Alt Text](images/demo.gif)
+![Alt Text](https://github.com/jigsawxyz/react-native-coreml-image-example/raw/master/images/demo.gif)
 
 This component provides a live camera view that allows you to integrate CoreML's Image Recognition into your apps.
 
@@ -9,6 +9,8 @@ For full details on how to use it, see the documentation below, but essentially 
 1. Create & train or download an existing machine learning model
 2. Drop the .mlmodelc file into your project
 3. Add this component to one of your views
+
+We have an example project (based on hot dog or not hot dog 🌭) here - https://github.com/jigsawxyz/react-native-coreml-image-example
 
 ## Installation instructions
 Within your react native project, run the following command to install the module:
