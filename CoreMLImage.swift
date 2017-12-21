@@ -99,10 +99,10 @@ public class CoreMLImage: UIView, AVCaptureVideoDataOutputSampleBufferDelegate {
     do {
       if (captureDevice != nil) {
         let input = try AVCaptureDeviceInput(device: captureDevice!)
-        captureSession = AVCaptureSession()
-        captureSession?.addInput(input)
+        self.captureSession = AVCaptureSession()
+        self.captureSession?.addInput(input)
         
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession!)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         videoPreviewLayer?.frame = view.layer.bounds
         
@@ -112,11 +112,11 @@ public class CoreMLImage: UIView, AVCaptureVideoDataOutputSampleBufferDelegate {
         let videoDataOutput = AVCaptureVideoDataOutput()
         let queue = DispatchQueue(label: "xyz.jigswaw.ml.queue")
         videoDataOutput.setSampleBufferDelegate(self, queue: queue)
-        guard (captureSession?.canAddOutput(videoDataOutput))! else {
+        guard (self.captureSession?.canAddOutput(videoDataOutput))! else {
           fatalError()
         }
-        captureSession?.addOutput(videoDataOutput)
-        captureSession?.startRunning()
+        self.captureSession?.addOutput(videoDataOutput)
+        self.captureSession?.startRunning()
       }
       
     } catch {
